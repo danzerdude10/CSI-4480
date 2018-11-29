@@ -30,6 +30,7 @@ p {
 }
 
 .navbar-brand {
+    padding-top: 8px;
     font-size: 30px;
 }
 
